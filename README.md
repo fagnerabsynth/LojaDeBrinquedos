@@ -5,7 +5,7 @@
  Faça a query no mysql
  
  
-create database projetoalmir;
+create database projetoalmir;<br />
 create table projetoalmir.brinquedos (
 codigo int auto_increment primary key not null, 
 descricao varchar(250) not null, 
