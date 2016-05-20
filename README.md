@@ -2,7 +2,7 @@
  
  Projeto do Prof. Almir com java Web...
  
- <font color='red'><b>Faça a query no mysql</b></font><br />
+<b>Faça a query no mysql</b><br />
  Copie e cole!
  
 <pre>
