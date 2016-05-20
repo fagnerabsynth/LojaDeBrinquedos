@@ -15,7 +15,6 @@ public class TestaConexao {
              c.marca="teste5";
              c.preco=15.50;
              
-             
              Database b = new Database();
              
              b.insert(c);

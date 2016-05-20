@@ -89,7 +89,6 @@ public class Database extends ConnectionFactory {
     public ArrayList<BrinquedoMOD> select(String tudo) {
 
         ArrayList<BrinquedoMOD> b = new ArrayList<>();
-
         tudo = mysql_real_escape_string(tudo);
 
         String query = "select * from brinquedos where descricao like '%" + tudo + "%' or categoria like '%" + tudo + "%'  order by codigo desc";
