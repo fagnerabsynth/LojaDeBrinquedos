@@ -2,10 +2,11 @@
  
  Projeto do Prof. Almir com java Web...
  
- Faça a query no mysql
+ <b style='color:red'>Faça a query no mysql</b><br />
+ Copie e cole!
  
- 
-create database projetoalmir;<br />
+<pre>
+create database projetoalmir;
 create table projetoalmir.brinquedos (
 codigo int auto_increment primary key not null, 
 descricao varchar(250) not null, 
@@ -17,3 +18,4 @@ detalhe longtext not null );
 CREATE USER 'projetoalmir'@'localhost' IDENTIFIED BY '123456';
 GRANT ALL PRIVILEGES ON `projetoalmir` . * TO 'projetoalmir'@'localhost' WITH GRANT OPTION ;
 FLUSH PRIVILEGES;
+</pre>
