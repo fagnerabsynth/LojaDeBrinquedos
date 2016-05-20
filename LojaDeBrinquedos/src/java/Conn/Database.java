@@ -115,7 +115,6 @@ public class Database extends ConnectionFactory {
 
         return b;
     }
-
     
     ///Faz a pesquisa pelo modelo categora e retorna todos os produtos... para a lista de pesquisa... 
     public ArrayList<BrinquedoMOD> select(CategoriaMOD i) {
