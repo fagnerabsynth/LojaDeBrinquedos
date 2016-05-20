@@ -8,9 +8,11 @@ import java.util.ArrayList;
 public class TestaConexao {
 	 public static void main(String[] args) throws SQLException{
      
+             BrinquedoMOD i = new BrinquedoMOD();
+             i.codigo = 1;
              Database b = new Database();
-             ArrayList<BrinquedoMOD> c = b.select();
-             ArrayList<BrinquedoMOD> i = c ;
+              b.delete(i);
+        
              
 	    }
 }

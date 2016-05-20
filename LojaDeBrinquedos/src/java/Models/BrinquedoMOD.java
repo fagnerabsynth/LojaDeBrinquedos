@@ -7,7 +7,7 @@ package Models;
 public class BrinquedoMOD {
 
     public int codigo;
-    public float preco;
+    public double preco;
     public String descricao;
     public String categoria;
     public String marca;
