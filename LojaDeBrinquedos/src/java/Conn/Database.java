@@ -92,7 +92,7 @@ public class Database extends ConnectionFactory {
 
         tudo = mysql_real_escape_string(tudo);
 
-        String query = "select * from brinquedos where descricao = '%" + tudo + "%' or categoria = '%" + tudo + "%'  order by codigo desc";
+        String query = "select * from brinquedos where descricao like '%" + tudo + "%' or categoria like '%" + tudo + "%'  order by codigo desc";
 
         ResultSet resultado;
         try {
