@@ -1,12 +1,16 @@
 package Conn;
+import Models.BrinquedoMOD;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class TestaConexao {
 	 public static void main(String[] args) throws SQLException{
-             try (Connection connection = ConnectionFactory.getConnection()) {
-                 System.out.println(" Conexao concluida");
-             }
+     
+             Database b = new Database();
+             ArrayList<BrinquedoMOD> c = b.select();
+             ArrayList<BrinquedoMOD> i = c ;
+             
 	    }
 }
