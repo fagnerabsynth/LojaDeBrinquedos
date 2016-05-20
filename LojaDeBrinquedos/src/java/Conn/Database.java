@@ -74,14 +74,14 @@ public class Database extends ConnectionFactory {
         return b;
     }
 
-    ///Faz a pesquisa pelo string digitado... para a lista de pesquisa... pesquisando em 3 campos descricao,categoria ou preco
+    ///Faz a pesquisa pelo string digitado... para a lista de pesquisa... pesquisando em 2 campos descricao,categoria
     public ArrayList<BrinquedoMOD> select(String tudo) {
 
         ArrayList<BrinquedoMOD> b = new ArrayList<>();
 
         tudo = mysql_real_escape_string(tudo);
 
-        String query = "select * from brinquedos where descricao = '%" + tudo + "%' or categoria = '%" + tudo + "%' or preco = '%" + tudo + "%' order by codigo desc";
+        String query = "select * from brinquedos where descricao = '%" + tudo + "%' or categoria = '%" + tudo + "%'  order by codigo desc";
 
         ResultSet resultado;
         try {
@@ -124,7 +124,7 @@ public class Database extends ConnectionFactory {
                 + "detalhe = '" + mysql_real_escape_string(b.detalhe) + "',"
                 + "marca = '" + mysql_real_escape_string(b.marca) + "',"
                 + "preco = '" + b.preco + "',"
-                + "  where codigo =codigo '" + b.codigo + "'";
+                + "  where codigo = '" + b.codigo + "'";
 
         boolean retorno = false;
         try {
@@ -158,7 +158,7 @@ public class Database extends ConnectionFactory {
     //para deletar basta passar a classe brinquedo...
     public boolean delete(BrinquedoMOD b) {
         String query = "delete from brinquedos"
-                + "  where codigo =codigo '" + b.codigo + "'";
+                + "  where codigo ='" + b.codigo + "'";
         boolean retorno = false;
         try {
             conexao.executeQuery(query);
