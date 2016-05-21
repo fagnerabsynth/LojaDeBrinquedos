@@ -12,12 +12,9 @@
     <body>
 
         <div class="container">
-            <div class="row" style="background-color: #d1d1d1;padding:20px;">
+            <div class="row" style="background-color: #fffff;box-shadow: 3px 3px 10px gray;border-radius:10px;margin-top: 20px;margin-bottom: 20px;padding:10px;">
                 <div class="col-sm-4"><img src="imagens/logo.png" class="img-responsive"></div>
                 <div class="col-sm-8"><div style="padding-top: 15px;"><h1><b>Arte & Brinque</b></h1><h3>Brinquedos</h3></div></div>
-            </div>
-            <div class="row">
-                <div class="alert alert-primary"></div>
             </div>
             <div class="row">
                 <div class="col-sm-3" id="menu" ></div>
@@ -26,7 +23,7 @@
         </div>
 
         <script type="text/javascript">
-            var  definida = "";
+            var definida = "";
             function CriaMenu() {
                 try {
                     var itens = new Object();
@@ -60,7 +57,7 @@
                 $.ajax({
                     url: window.location.href.replace("#", "") + pagina,
                     dataType: 'html',
-                    data: {cor:definida  },
+                    data: {cor: definida},
                     method: 'GET'}).done(function (e) {
                     $('#conteudo').html(e);
                 });
