@@ -40,10 +40,15 @@ public class Administracao extends HttpServlet {
             Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        
         try (PrintWriter out = response.getWriter()) {
-            out.println("<address>Você esta em: <b><a href='Javascript:Void(0)' onclick='pagina(\"Home\")'>" + request.getServletPath().replace('/', ' ') + "</a></b> </address>");
-
+            out.println("<address>Você esta em: <b><a href='Javascript:Void(0)' class='btn-" + request.getParameter("cor") + " btn-link' onclick='pagina(\"" + request.getServletPath().replace('/', ' ') + "\")'>" + request.getServletPath().replace('/', ' ') + "</a></b> </address>");
+            out.println("<div class='col-sm-12'>");
+            out.println("<div class=\"input-group\">");
+            out.println("<input type=\"text\" class=\"form-control\" placeholder=\"Pesquisar...\">");
+            out.println("<span class=\"input-group-btn\">");
+            out.println("<button class='form-control btn btn-" + request.getParameter("cor") + "' type=\"button\"><span class=\"glyphicon glyphicon-search\" aria-hidden=\"true\"></span> Pesquisar</button>");
+            out.println("</span>");
+            out.println("</div>");
         }
     }
 

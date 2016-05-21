@@ -20,6 +20,11 @@
             </test-roots>
         </data>
         <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+            <library name="jquery" version="2.2.4">
+                <file localPath="web/js/libs/jquery/jquery.js" path="jquery.js"/>
+                <file localPath="web/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
+                <file localPath="web/js/libs/jquery/jquery.min.map" path="jquery.min.map"/>
+            </library>
             <library name="twitter-bootstrap" version="4.0.0-alpha.2">
                 <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap.css" path="css/bootstrap.css"/>
                 <file localPath="web/js/libs/twitter-bootstrap/css/bootstrap.css.map" path="css/bootstrap.css.map"/>

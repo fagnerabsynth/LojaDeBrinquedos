@@ -42,7 +42,7 @@ public class Catalogo extends HttpServlet {
 
         
         try (PrintWriter out = response.getWriter()) {
-            out.println("<address>Você esta em: <b><a href='Javascript:Void(0)' onclick='pagina(\"" + request.getServletPath().replace('/', ' ') + "\")'>" + request.getServletPath().replace('/', ' ') + "</a></b> </address>");
+            out.println("<address>Você esta em: <b><a href='Javascript:Void(0)' class='btn-" + request.getParameter("cor") + " btn-link' onclick='pagina(\"" + request.getServletPath().replace('/', ' ') + "\")'>" + request.getServletPath().replace('/', ' ') + "</a></b> </address>");
 
         }
     }
