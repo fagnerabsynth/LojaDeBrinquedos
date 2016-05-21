@@ -6,6 +6,8 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Fagner
  */
-@WebServlet(urlPatterns = {"/Cadastro"})
-public class Cadastro extends HttpServlet {
+@WebServlet(urlPatterns = {"/Administração"})
+public class Administracao extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,17 +33,17 @@ public class Cadastro extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Cadastro</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Cadastro at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            out.println("<address>Você esta em: <b><a href='Javascript:Void(0)' onclick='pagina(\"Home\")'>" + request.getServletPath().replace('/', ' ') + "</a></b> </address>");
+
         }
     }
 
