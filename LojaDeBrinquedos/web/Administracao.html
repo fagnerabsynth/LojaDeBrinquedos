@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script src="js/libs/twitter-bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <h3>ADMINISTRAÇÃO</h3><br>
+<input type="text" name="pesquisa" value="pesquise" ><input type="button" name="botao" value="  ">
+
+<table  border=1  WIDTH=75% class="table table-hover">
+    <tr ALIGN=MIDDLE>
+      <td> Descrição</td>
+      <td>Categoria</td>
+      <td>Preço</td>
+    <td  >Controles</td>
+  </tr>
+  
+<c:forEach items="${brinquedos}" var="lista">
+	<tr  ALIGN=MIDDLE>
+           <td>%{lista.descricao}</td>
+           <td>${lista.categoria}</td>
+           <td>${lista.preco}</td>
+           <td><a href="index.html">Editar - 
+<a onclick="return confirmarExclusao()" href="">Excluir</a></td>
+	</tr>
+	</c:forEach>
+
+
+</table>
+<input type="button" name="botao" value="Novo Brinquedo">
+        
+    </body>
+</html>
