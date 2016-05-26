@@ -19,7 +19,6 @@ public class TestaConexao {
              
              b.insert(c);
              ArrayList<BrinquedoMOD> d = b.select();
-             ArrayList<BrinquedoMOD> i = d ;
              
 	    }
 }
